@@ -1,0 +1,46 @@
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #444;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+.donate-btn {
+  padding: 0.4rem 0.8rem;
+  background: #d97706;
+  color: white !important;
+  border-radius: 6px;
+}
+
+.donate-btn:hover {
+  background: #b45309;
+}
