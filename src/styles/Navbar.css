@@ -1,76 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   width: 100%;
-  background-color: white;
-  border-bottom: 1px solid #eee;
-  padding: 1rem 0;
-
-  /* ✨ Add this shadow */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .nav-inner {
-  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  justify-content: space-evenly;
+  padding: 0 1.2rem;
 }
 
-
-/* Center the title perfectly */
-.nav-logo {
-  flex: 1;
-  display: flex;
-  justify-content: start;
-}
-
+/* Logo */
 .nav-logo a {
+  color: #7c2ae8;                
   font-size: 32px;
-  font-weight: 600;
-  text-decoration: rebeccapurple;
-  color: #222;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Georgia";
+  font-style: italic;
+  text-shadow: 0 0 8px rgba(124, 42, 232, 0.4);
+  text-decoration: none;
+  letter-spacing: 3px;
 }
 
-/* Right-side links */
+/* Desktop links */
 .nav-links {
-  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #444;
-  font-size: 18px;
-  transition: 0.2s ease;
+  color: #333;
+  font-size: 20px;
+  transition: 0.2s;
 }
 
 .nav-links a:hover {
-  color: #000;
+  color: #5a3db9;  /* purple hover */
 }
 
+/* Donate button */
 .donate-btn {
-  background-color: #7c3aed; /* Purple 600 */
-  color: white !important;
+  background: #7b3fe4;
   padding: 8px 18px;
-  border-radius: 8px;
+  border-radius: 6px;
+  color: white !important;
   font-weight: 600;
-  border: none;
-  cursor: pointer;
-  
-  box-shadow: 0 3px 8px rgba(124, 58, 237, 0.35);
-  transition: all 0.2s ease;
+  transition: 0.2s;
 }
 
 .donate-btn:hover {
-  background-color: #6d28d9; /* Purple 700 */
-  box-shadow: 0 5px 14px rgba(124, 58, 237, 0.5);
-  transform: translateY(-2px);
+  background: #6932c0;
+}
+
+/* ================= MOBILE MENU ================= */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Dropdown container */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+
+  /* LOGO */
+.nav-logo a {
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #7c2ae8;                  /* Purple */
+  text-shadow: 0 0 8px rgba(124, 42, 232, 0.4);
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+
+/* Align navbar left + right */
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Fancy dropdown card */
+  .mobile-menu {
+    display: block;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    margin: 0.5rem auto;
+    width: 92%;
+    padding: 1rem 1.2rem;
+    animation: slideDown 0.25s ease-out;
+  }
+
+  .mobile-menu a {
+    display: block;
+    padding: 12px 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-menu .donate-btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}
+
+/* Smooth dropdown animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
