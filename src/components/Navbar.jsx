@@ -3,21 +3,21 @@ import "../styles/Navbar.css";
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="nav-container">
+ <nav className="navbar">
+  <div className="nav-inner">
+    <div className="nav-logo">
+      <Link to="/">Nikki Carso Scholarship</Link>
+    </div>
 
-        <div className="nav-logo">
-          <Link to="/">Carso Scholarship</Link>
-        </div>
+    <div className="nav-links">
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/gallery">Gallery</Link>
+      <Link to="/donate" className="donate-btn">Donate</Link>
+    </div>
 
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/donate" className="donate-btn">Donate</Link>
-        </div>
 
-      </div>
-    </nav>
+  </div>
+</nav>
   );
 }
