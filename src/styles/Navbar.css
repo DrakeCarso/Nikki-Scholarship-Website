@@ -122,8 +122,8 @@ body {
 
   .mobile-menu a {
     display: block;
-    padding: 12px 0;
-    font-size: 1.05rem;
+    padding: 16px 0;
+    font-size: 1.3rem;
     border-bottom: 1px solid #eee;
     color: #333;
     text-decoration: none;
