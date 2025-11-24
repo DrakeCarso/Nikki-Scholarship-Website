@@ -6,6 +6,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const stripeDonateUrl = "https://buy.stripe.com/5kQcN71pJdev338fNP2Ji00";
+  const galleryUrl = "https://northcoastcaninecontent.pixieset.com/nccs5k/?utm_source=ig&utm_medium=social&utm_content=link_in_bio";
 
   return (
     <nav className="navbar">
@@ -20,7 +21,13 @@ export default function Navbar() {
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/gallery">Gallery</Link>
+          <a 
+            href={galleryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Gallery
+          </a>
 
           {/* CHANGE HERE */}
           <a 
