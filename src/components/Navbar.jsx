@@ -54,7 +54,16 @@ export default function Navbar() {
         <div className="mobile-menu">
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
+          
+          {/* MOBILE GALLERY */}
+          <a
+            href={galleryUrl}
+            onClick={() => setMenuOpen(false)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Gallery
+          </a>
 
           {/* CHANGE HERE TOO */}
           <a
