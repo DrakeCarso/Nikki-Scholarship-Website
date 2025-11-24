@@ -5,6 +5,8 @@ import "../styles/Navbar.css";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const stripeDonateUrl = "https://buy.stripe.com/5kQcN71pJdev338fNP2Ji00";
+
   return (
     <nav className="navbar">
       <div className="nav-inner">
@@ -19,7 +21,16 @@ export default function Navbar() {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/gallery">Gallery</Link>
-          <Link to="/donate" className="donate-btn">Donate</Link>
+
+          {/* CHANGE HERE */}
+          <a 
+            href={stripeDonateUrl} 
+            className="donate-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donate
+          </a>
         </div>
 
         {/* RIGHT — MOBILE HAMBURGER */}
@@ -31,19 +42,23 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE DROPDOWN MENU */}
+      {/* MOBILE DROPDOWN */}
       {menuOpen && (
         <div className="mobile-menu">
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
-          <Link 
-            to="/donate" 
-            className="donate-btn mobile-donate" 
+
+          {/* CHANGE HERE TOO */}
+          <a
+            href={stripeDonateUrl}
+            className="donate-btn mobile-donate"
             onClick={() => setMenuOpen(false)}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Donate
-          </Link>
+          </a>
         </div>
       )}
     </nav>

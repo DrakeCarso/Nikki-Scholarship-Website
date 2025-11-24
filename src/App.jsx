@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Donate from "./pages/Donate";
 import Gallery from "./pages/Gallery";
 
 // Styles
@@ -19,7 +18,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/donate" element={<Donate />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>
 
