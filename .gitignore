@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< Updated upstream
+=======
+
+# Local Netlify folder
+.netlify
+
+# Environmental Variables
+.env
+>>>>>>> Stashed changes
