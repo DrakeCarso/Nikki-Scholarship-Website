@@ -22,17 +22,30 @@ body {
   padding: 0 1.2rem;
 }
 
-/* Logo */
-.nav-logo a {
-  color: #7c2ae8;                
+/* LOGO WRAPPER */
+.logo-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+}
+
+/* LOGO IMAGE */
+.logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* LOGO TEXT */
+.logo-text {
+  color: #7c2ae8;
   font-size: 32px;
   font-weight: 700;
-  text-decoration: none;
   font-family: "Georgia";
   font-style: italic;
-  text-shadow: 0 0 8px rgba(124, 42, 232, 0.4);
-  text-decoration: none;
   letter-spacing: 3px;
+  text-shadow: 0 0 8px rgba(124, 42, 232, 0.4);
 }
 
 /* Desktop links */
@@ -50,7 +63,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #5a3db9;  /* purple hover */
+  color: #5a3db9;
 }
 
 /* Donate button */
@@ -67,39 +80,27 @@ body {
   background: #6932c0;
 }
 
-/* ================= MOBILE MENU ================= */
+/* MOBILE MENU */
 .hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
 }
 
-/* Dropdown container */
 .mobile-menu {
   display: none;
 }
 
+/* MOBILE STYLES */
 @media (max-width: 768px) {
 
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
 
-  /* LOGO */
-.nav-logo a {
-  font-size: 1.7rem;
-  font-weight: 700;
-  font-style: italic;
-  color: #7c2ae8;                  /* Purple */
-  text-shadow: 0 0 8px rgba(124, 42, 232, 0.4);
-  text-decoration: none;
-  letter-spacing: 3px;
-}
-
-/* Align navbar left + right */
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-}
   .nav-links {
     display: none;
   }
@@ -108,7 +109,15 @@ body {
     display: block;
   }
 
-  /* Fancy dropdown card */
+  /* mobile logo image smaller */
+  .logo-img {
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 1.7rem;
+  }
+
   .mobile-menu {
     display: block;
     background: white;
@@ -136,12 +145,12 @@ body {
   .mobile-menu .donate-btn {
     margin-top: 1rem;
     width: 100%;
-    text-align: center;
     display: block;
+    text-align: center;
   }
 }
 
-/* Smooth dropdown animation */
+/* Smooth animation */
 @keyframes slideDown {
   from {
     opacity: 0;

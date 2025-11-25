@@ -19,16 +19,18 @@
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
   align-items: flex-start;
   animation: fadeInUp 0.7s ease-out forwards;
-  opacity: 0; /* ensures animation actually runs */
+  opacity: 0;
 }
 
-/* IMAGE SECTION */
+/* LEFT COLUMN — IMAGES & QUOTE */
 .about-image-wrapper {
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* MAIN PHOTO */
 .about-image {
   width: 100%;
   max-width: 450px;
@@ -36,7 +38,35 @@
   object-fit: cover;
   border-radius: 32px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  transform: translateY(-10px); /* softened raise */
+  transform: translateY(-10px);
+}
+
+/* FAMILY PHOTO */
+.family-image {
+  width: 100%;
+  max-width: 450px;
+  margin-top: 100px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* QUOTE BLOCK */
+.family-quote {
+  max-width: 450px;
+  margin-top: 25px;
+  font-style: italic;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #4a2c6a;
+  text-align: center;
+}
+
+.carso-signature {
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
 }
 
 /* TEXT BLOCK */
@@ -48,7 +78,7 @@
 .about-title {
   font-family: 'Playfair Display', serif;
   font-size: 54px;
-  font-weight: 600; /* softened boldness */
+  font-weight: 600;
   color: #3b1962;
   margin-bottom: 35px;
 }
@@ -67,7 +97,7 @@
   font-size: 20px;
   line-height: 1.85;
   margin-bottom: 20px;
-  color: #444; /* softer contrast */
+  color: #444;
 }
 
 .about-text ul {
@@ -102,7 +132,8 @@
     align-items: center;
   }
 
-  .about-image {
+  .about-image,
+  .family-image {
     max-width: 280px;
     width: 100%;
     margin: 0 auto;
@@ -111,14 +142,24 @@
     transform: translateY(0);
   }
 
+  .family-image {
+    margin-top: 20px;
+  }
+
+  .family-quote {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 300px;
+  }
+
+  .carso-signature {
+    font-size: 18px;
+  }
+
   .about-title {
     font-size: 38px;
     margin-bottom: 20px;
     text-align: left;
-  }
-
-  .about-text {
-    flex: unset;
   }
 
   .about-text p,

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../styles/Navbar.css";
+import NikkiRunning from "../assets/NikkiRunning.jpg"; // <-- NEW IMPORT
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,13 +15,17 @@ export default function Navbar() {
 
         {/* LEFT — LOGO */}
         <div className="nav-logo">
-          <Link to="/">NCCS</Link>
+          <Link to="/" className="logo-flex">
+            <img src={NikkiRunning} alt="Nikki Running Logo" className="logo-img" />
+            <span className="logo-text">NCCS</span>
+          </Link>
         </div>
 
         {/* RIGHT — DESKTOP LINKS */}
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
+
           <a 
             href={galleryUrl}
             target="_blank"
@@ -29,7 +34,6 @@ export default function Navbar() {
             Gallery
           </a>
 
-          {/* CHANGE HERE */}
           <a 
             href={stripeDonateUrl} 
             className="donate-btn"
@@ -55,7 +59,6 @@ export default function Navbar() {
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
           
-          {/* MOBILE GALLERY */}
           <a
             href={galleryUrl}
             onClick={() => setMenuOpen(false)}
@@ -65,7 +68,6 @@ export default function Navbar() {
             Gallery
           </a>
 
-          {/* CHANGE HERE TOO */}
           <a
             href={stripeDonateUrl}
             className="donate-btn mobile-donate"
