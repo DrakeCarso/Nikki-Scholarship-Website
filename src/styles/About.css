@@ -1,0 +1,133 @@
+/* PAGE BACKGROUND */
+.about-container {
+  background-color: #F4E8FF;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* UNIFIED WHITE BLOCK */
+.about-content {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  gap: 80px;
+  background: #FBF8FF; /* softened white */
+  padding: 70px 90px;
+  border-radius: 32px;
+  border: 1px solid rgba(120, 80, 170, 0.10);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  align-items: flex-start;
+  animation: fadeInUp 0.7s ease-out forwards;
+  opacity: 0; /* ensures animation actually runs */
+}
+
+/* IMAGE SECTION */
+.about-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px); /* softened raise */
+}
+
+/* TEXT BLOCK */
+.about-text {
+  flex: 1.3;
+}
+
+/* TYPOGRAPHY */
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 54px;
+  font-weight: 600; /* softened boldness */
+  color: #3b1962;
+  margin-bottom: 35px;
+}
+
+.section-header {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #5a2c85;
+}
+
+.about-text p,
+.about-text li {
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  color: #444; /* softer contrast */
+}
+
+.about-text ul {
+  padding-left: 25px;
+}
+
+/* FADE-IN ANIMATION */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+  .about-container {
+    padding: 40px 15px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+    border-radius: 22px;
+    max-width: 95%;
+    align-items: center;
+  }
+
+  .about-image {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(0);
+  }
+
+  .about-title {
+    font-size: 38px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .about-text {
+    flex: unset;
+  }
+
+  .about-text p,
+  .about-text li {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .about-text ul {
+    padding-left: 18px;
+  }
+}

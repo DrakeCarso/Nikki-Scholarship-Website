@@ -1,10 +1,14 @@
+html, body {
+  overflow-x: hidden;
+}
+
 .hero {
   width: 100%;
   min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 60px 20px;
+  padding-top: 60px;
   background: #faf7ff; /* soft purple tint */
 }
 
@@ -61,3 +65,4 @@
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
