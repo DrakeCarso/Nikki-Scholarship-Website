@@ -37,7 +37,7 @@ export default function About() {
         <div className="about-text">
           <h1 className="about-title">Nikki Cozzi Carso</h1>
 
-          <h2 className="section-header">Holy Family</h2>
+          
           <p>
             Nikki truly embodied what it means to be a teacher, reaching far beyond the classroom. She taught 8th grade at Holy Family Catholic Academy and was a devoted parishioner at St. James Church in Arlington Heights. Gifted at making complex ideas understandable, she combined intelligence with poise and a genuine eagerness to share knowledge. She was especially passionate about Catholic education, believing it gave students meaningful ways to encounter and engage with God in daily life.
 
@@ -47,9 +47,10 @@ export default function About() {
 
           </p>
           <p>
-Thanks to an outpouring of generosity, the Nikki scholarship was established, awarding $1,000 annually to one student from Holy Family Catholic Academy and one from St. James Catholic School. Teachers nominate students who are active in their faith, demonstrate a deep understanding of their beliefs, and show compassion, kindness, and empathy. They are committed learners, independent thinkers, and active in service both in and out of school. Their actions reflect a dedication to using their talents to positively impact the community and inspire those around them.
-Though the scholarship represents only one aspect of Nikki’s life, it carries forward her legacy. 
-
+Thanks to an outpouring of generosity, the Nikki scholarship was established, awarding $1,000 annually to one student from Holy Family Catholic Academy and one from St. James Catholic School. Teachers nominate students who are active in their faith, demonstrate a deep understanding of their beliefs, and show compassion, kindness, and empathy. They are committed learners, independent thinkers, and active in service both in and out of school. Their actions reflect a dedication to using their talents to positively impact the community and inspire those around them. 
+          </p>
+          <p>
+            Though the scholarship represents only one aspect of Nikki’s life, it carries forward her legacy.
           </p>
 
           <p>
@@ -61,25 +62,6 @@ we hope this tradition will continue for years to come.
 John 11:4 “When he heard this, Jesus said: This sickness will not end in death. No, it is for God’s glory so that God’s Son may be glorified through it.”
 
           </p>
-          <h2 className="section-header">St. James</h2>
-          <ul>
-            <li>
-              Commitment to learning — “Most men seem to live according to sense
-              rather than reason.”
-            </li>
-            <li>
-              Compassionate — “We must love one another as God loves each one of us.”
-            </li>
-            <li>
-              Independent — “Go forth and set the world aflame.”
-            </li>
-            <li>
-              Commitment to service inside and outside the classroom...
-            </li>
-            <li>
-              Involvement with at least one service initiative
-            </li>
-          </ul>
         </div>
 
       </div>

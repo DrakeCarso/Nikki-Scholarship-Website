@@ -2,6 +2,7 @@ html, body {
   overflow-x: hidden;
 }
 
+/* HERO WRAPPER */
 .hero {
   width: 100%;
   min-height: 90vh;
@@ -12,6 +13,7 @@ html, body {
   background: #faf7ff; /* soft purple tint */
 }
 
+/* WHITE LETTER-STYLE BOX */
 .hero-box {
   max-width: 900px;
   padding: 50px;
@@ -19,15 +21,17 @@ html, body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   animation: fadeIn 0.8s ease;
 
-  /* ADD THESE LINES ↓ */
- /* background-image: url("../assets/NikkiBackground.png");
-  background-size: contain;      /* keep logo small */
-  background-repeat: no-repeat;  /* stop tiling */
-  background-position: center;   /* center it */
+  /* OPTIONAL BACKGROUND LOGO
+  background-image: url("../assets/NikkiBackground.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  */
+  
   background-color: rgba(255, 255, 255, 0.96);
-  background-size: 60%; 
 }
 
+/* HEADER */
 .hero-box h1 {
   font-size: 2.3rem;
   font-weight: 800;
@@ -36,6 +40,7 @@ html, body {
   text-align: center;
 }
 
+/* PARAGRAPHS */
 .hero-box p {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -43,6 +48,7 @@ html, body {
   color: #333;
 }
 
+/* SUBHEADERS */
 .hero-box h2 {
   margin-top: 40px;
   font-size: 1.6rem;
@@ -50,6 +56,7 @@ html, body {
   color: #2c1b47;
 }
 
+/* LISTS */
 .hero-box ul {
   margin-left: 20px;
   font-size: 1.05rem;
@@ -60,9 +67,65 @@ html, body {
   margin-bottom: 10px;
 }
 
+/* CTA SECTION */
+.cta-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1.15rem;
+  color: #2c1b47;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Buttons container */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Buttons */
+.cta-btn {
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  transform: translateY(0);
+}
+
+/* Gallery Button */
+.cta-btn-gallery {
+  background: white;
+  color: #2c1b47;
+  border: 2px solid #2c1b47;
+}
+
+.cta-btn-gallery:hover {
+  background: #f2e7ff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(124, 70, 200, 0.25);
+  border-color: #6d3ccf;
+}
+
+/* Donate Button */
+.cta-btn-donate {
+  background: #7a32ff;
+  color: white;
+}
+
+.cta-btn-donate:hover {
+  background: #6929d6;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 14px rgba(122, 50, 255, 0.35);
+}
+
 /* Fade-in animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-

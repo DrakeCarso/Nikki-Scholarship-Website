@@ -1,4 +1,5 @@
 import "../styles/Home.css"
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -40,6 +41,37 @@ export default function Home() {
         <p>
           Thank you to those who ran, walked, and canicrossed all for a great cause!
         </p>
+
+        {/* --- NEW SECTION ADDED BELOW --- */}
+       <div className="cta-section">
+  <p className="cta-text">
+    Feel free to click the buttons below to view the Gallery or Donate.
+  </p>
+
+  <div className="cta-buttons">
+
+    {/* ----- GALLERY BUTTON (external link) ----- */}
+    <a 
+      href="https://northcoastcaninecontent.pixieset.com/nccs5k/?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+      className="cta-btn cta-btn-gallery"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Gallery
+    </a>
+
+    {/* ----- DONATE BUTTON (Stripe checkout) ----- */}
+    <a
+      href="https://buy.stripe.com/5kQcN71pJdev338fNP2Ji00"
+      className="cta-btn cta-btn-donate"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Donate
+    </a>
+
+  </div>
+</div>
 
       </div>
     </div>
