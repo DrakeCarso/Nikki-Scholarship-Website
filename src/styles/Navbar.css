@@ -233,6 +233,10 @@ body {
     display: none;
   }
 
+  .nav-inner {
+  justify-content: space-between;
+}
+
   .hamburger {
     display: block;
   }
