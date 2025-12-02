@@ -6,13 +6,19 @@ import NikkiRunning from "../assets/NikkiRunning.png";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false); // NEW
+  const [mobileGalleryOpen, setMobileGalleryOpen] = useState(false); // NEW
 
   const stripeDonateUrl = "https://buy.stripe.com/5kQcN71pJdev338fNP2Ji00";
-  const galleryUrl = "https://northcoastcaninecontent.pixieset.com/nccs5k/?utm_source=ig&utm_medium=social&utm_content=link_in_bio";
+  
+  const gallery2025 =
+    "https://flic.kr/s/aHBqjCCmET";
+
+  const canicrossPhotos =
+    "https://northcoastcaninecontent.pixieset.com/";
 
   const location = useLocation();
 
-  // Detect scroll for shrink effect + glass blur
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -21,9 +27,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu on route change
   useEffect(() => {
     setMenuOpen(false);
+    setMobileGalleryOpen(false);
   }, [location.pathname]);
 
   return (
@@ -54,13 +60,26 @@ export default function Navbar() {
             About
           </Link>
 
-          <a
-            href={galleryUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Gallery
-          </a>
+          {/* GALLERY DROPDOWN */}
+          <div className="dropdown">
+  <button 
+    className="dropdown-trigger"
+    onClick={() => setGalleryOpen(!galleryOpen)}
+  >
+    Gallery ▾
+  </button>
+
+  {galleryOpen && (
+    <div 
+      className="dropdown-menu"
+      onMouseLeave={() => setGalleryOpen(false)}
+    >
+      <a href={gallery2025} target="_blank" rel="noopener noreferrer">NCCS 2025</a>
+      <a href={canicrossPhotos} target="_blank" rel="noopener noreferrer">Canicross Photos</a>
+    </div>
+  )}
+</div>
+
 
           <a
             href={stripeDonateUrl}
@@ -86,9 +105,24 @@ export default function Navbar() {
       <div className={`mobile-menu ${menuOpen ? "menu-open" : ""}`}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <a href={galleryUrl} target="_blank" rel="noopener noreferrer">
-          Gallery
-        </a>
+
+        {/* MOBILE DROPDOWN */}
+        <div className="mobile-dropdown">
+          <button
+            className="mobile-dropdown-trigger"
+            onClick={() => setMobileGalleryOpen(!mobileGalleryOpen)}
+          >
+            Gallery {mobileGalleryOpen ? "▴" : "▾"}
+          </button>
+
+          {mobileGalleryOpen && (
+            <div className="mobile-dropdown-menu">
+              <a href={gallery2025} target="_blank" rel="noopener noreferrer">NCCS 2025</a>
+              <a href={canicrossPhotos} target="_blank" rel="noopener noreferrer">Canicross Photos</a>
+            </div>
+          )}
+        </div>
+
         <a
           href={stripeDonateUrl}
           className="donate-btn mobile-donate"
